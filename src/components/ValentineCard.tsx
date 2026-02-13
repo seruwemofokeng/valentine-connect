@@ -21,7 +21,11 @@ const ValentineCard = () => {
   };
 
   const openWhatsApp = () => {
-    window.open(`https://wa.me/27677566434?text=${WHATSAPP_MESSAGE}`, "_blank");
+    const link = document.createElement("a");
+    link.href = `https://wa.me/27677566434?text=${WHATSAPP_MESSAGE}`;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.click();
   };
 
   return (
